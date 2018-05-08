@@ -10,5 +10,5 @@ RUN chmod +x /usr/local/sbin/*
 
 VOLUME /etc/openvpn
 EXPOSE 443/tcp 1194/udp 8080/tcp 8338/tcp
-CMD start
-CMD run
+
+CMD start && run
