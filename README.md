@@ -1,4 +1,4 @@
-# OpenVPN for Docker
+# MaltrailWorld-VPN
 
 Quick instructions:
 
