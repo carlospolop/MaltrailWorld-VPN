@@ -6,9 +6,9 @@ This project runs an Open-VPN server whose traffic will be automatically inspect
 
 ```bash
 # Run a new docker container with carlospolop/maltrailworld-vpn
-CID=$(docker run -d --privileged -p 1194:1194/udp -p 443:443/tcp -p 8338:8338/tcp carlospolop/maltrailworld-vpn)
+docker run -d --privileged --name "maltrailworld-vpn" -p 1194:1194/udp -p 443:443/tcp -p 8338:8338/tcp carlospolop/maltrailworld-vpn
 # Listen in port 8080 where a valid client configuration file will be provided
-docker run -t -i -p 8080:8080 --volumes-from $CID carlospolop/maltrailworld-vpn serveconfig
+docker run -t -i -p 8080:8080 --volumes-from "maltrailworld-vpn" carlospolop/maltrailworld-vpn serveconfig
 ```
 
 ## VPN + Malicious packet analysis
