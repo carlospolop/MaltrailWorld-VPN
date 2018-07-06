@@ -1,6 +1,4 @@
 #!/bin/sh
 
-openssl req -new -x509 -keyout /home/maltrailworld/maltrailworld/misc/server.pem -out /home/maltrailworld/maltrailworld/misc/server.pem -days 1023 -nodes -subj "/CN=localhost" -sha256
-
 python /home/maltrailworld/maltrailworld/sensor.py &
 python /home/maltrailworld/maltrailworld/server.py &
