@@ -1,4 +1,6 @@
 #!/bin/sh
 
-python /home/maltrailworld/maltrailworld/sensor.py &
+
 python /home/maltrailworld/maltrailworld/server.py &
+sleep 5
+python /home/maltrailworld/maltrailworld/sensor.py &
